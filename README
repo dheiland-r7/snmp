@@ -1,7 +1,5 @@
-These  perl scripts are for extracting SNMP data from target systems and parsing i
-those file for potentialy usable data.
+These  perl scripts are for extracting SNMP data from target systems and parsing those file for potentialy usable data.
 
-This git repository contains three file
 
 snmpbw.pl   --> A multithreaded perl script for bulk walking targeted host systems for SNMP data
 
@@ -21,8 +19,6 @@ timeout   :Timeout is in seconds
 threads   :number of threads to run
 
 
-
-
 Syntax    "snmpprs.pl OutputFile" 
 -----------------------------------------------------------
 example-1   ./snmpprs.pl results.txt
@@ -30,6 +26,12 @@ example-2   ./snmpprs.pl /home/location/results.txt
 -----------------------------------------------------------
 OutputFile :File name and path where you want the data writen too
 
+reg_list is an editable file. Please use this to add any keyword or regular expression you discover to return usable value. Also please contact me with any recommended additions. Currently there are only a few entries in this file currently.
+
+Return email addresses                --> [A-Z0-9._%+-]+@[A-Z0-9.-]+\.[comnetrg]{3}
+Return linux/unix MD5 cipher hashes   --> \$[1-6]\$[0-9A-Z./$]{31}
+Return possible MD5s                  --> \"[0-9A-F]{32}\"
+Keyword returns trap community string --> traphost
 
 
 These scripts should be considered usable proof of concept beta code. Further updates will be made to improve the code and better format the output of the data recovered.
