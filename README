@@ -7,6 +7,13 @@ snmpprs.pl  --> A perl script for parsing the results of from snmpbw.pl. Looking
 
 reg_list    --> A list of keyword and regular expression for input to snmprs.pl script
 
+Linux host requirements:
+
+SNMP needs to be installed on linux host. This can be done using the following apt-get command
+  apt-get install snmp
+
+Also the following perl module should be installed using cpan.
+  cpan -i NetAddr::IP
 
 
 Syntax    "snmpbw.pl target community timeout threads" 
