@@ -1,9 +1,9 @@
-These  perl scripts are for extracting SNMP data from target systems and parsing those file for potentialy usable data.
+These  perl and Python scripts are for extracting SNMP data from target systems and parsing those file for potentialy usable data.
 
 
-snmpbw.pl   --> A multithreaded perl script for bulk walking targeted host systems for SNMP data
+snmpbw.pl/py   --> A multithreaded perl script for bulk walking targeted host systems for SNMP data
 
-snmpprs.pl  --> A perl script for parsing the results of from snmpbw.pl. Looking for usable data
+snmpprs.pl/py  --> A perl script for parsing the results of from snmpbw.pl. Looking for usable data
 
 reg_list    --> A list of keyword and regular expression for input to snmprs.pl script
 
@@ -18,18 +18,18 @@ Also the following perl module should be installed using cpan.
 
 Syntax    "snmpbw.pl target community timeout threads" 
 -----------------------------------------------------------
-example-1   ./snmpbw.pl 192.168.0.1 public 2 1
-example-2   ./snmpbw.pl ipfile.txt  public 2 4
+example-1   ./snmpbw.pl/py 192.168.0.1 public 2 1
+example-2   ./snmpbw.pl/py ipfile.txt  public 2 4
 -----------------------------------------------------------
 community :public or what ever the community string is
 timeout   :Timeout is in seconds 
 threads   :number of threads to run
 
 
-Syntax    "snmpprs.pl OutputFile" 
+Syntax    "snmpprs.pl/py OutputFile" 
 -----------------------------------------------------------
-example-1   ./snmpprs.pl results.txt
-example-2   ./snmpprs.pl /home/location/results.txt
+example-1   ./snmpprs.pl/py results.txt
+example-2   ./snmpprs.pl/py /home/location/results.txt
 -----------------------------------------------------------
 OutputFile :File name and path where you want the data writen too
 
